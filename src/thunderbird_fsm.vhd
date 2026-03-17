@@ -85,24 +85,58 @@ library ieee;
   use ieee.std_logic_1164.all;
   use ieee.numeric_std.all;
  
-entity thunderbird_fsm is 
---  port(
-	
---  );
+entity thunderbird_fsm is
+    port (
+        i_clk, i_reset  : in    std_logic;
+        i_left, i_right : in    std_logic;
+        o_lights_L      : out   std_logic_vector(2 downto 0);
+        o_lights_R      : out   std_logic_vector(2 downto 0)
+    );
 end thunderbird_fsm;
 
 architecture thunderbird_fsm_arch of thunderbird_fsm is 
-
--- CONSTANTS ------------------------------------------------------------------
+-- CONSTANTS ------------------------------------------------------------------ 
+    signal S2, S1, S0 : std_logic;
+    signal S2_next, S1_next, S0_next : std_logic;
   
 begin
 
 	-- CONCURRENT STATEMENTS --------------------------------------------------------	
-	
+    S2_next <= ((not S2) and (not S1) and (not S0) and i_left) or
+               (S2 and (not S1) and (not S0)) or
+               (S2 and (not S1) and S0);
+    S1_next <= ((not S2) and (not S1) and (not S0) and i_left and i_right) or
+               ((not S2) and (not S1) and S0) or
+               ((not S2) and S1 and (not S0)) or
+               (S2 and (not S1) and S0);
+    S0_next <= ((not S2) and (not S1) and (not S0) and i_right) or
+               ((not S2) and S1 and (not S0)) or
+               (S2 and (not S1) and (not S0));
+               
+
+    o_lights_L(0) <= S2 or (S2 and S1 and S0);
+    o_lights_L(1) <= (S2 and (S1 or S0)) or (S2 and S1 and S0);
+    o_lights_L(2) <= (S2 and S1) or (S2 and S1 and S0);
+    
+
+    o_lights_R(0) <= ((not S2) and (S1 or S0)) or (S2 and S1 and S0); 
+    o_lights_R(1) <= ((not S2) and S1) or (S2 and S1 and S0);
+    o_lights_R(2) <= ((not S2) and S1 and S0) or (S2 and S1 and S0); 
     ---------------------------------------------------------------------------------
 	
 	-- PROCESSES --------------------------------------------------------------------
-    
+    register_proc : process(i_clk, i_reset)
+    begin
+    if i_reset = '1' then
+        S2 <= '0';
+        S1 <= '0';
+        S0 <= '0';
+    elsif rising_edge(i_clk) then  
+        S2 <= S2_next;
+        S1 <= S1_next;
+        S0 <= S0_next;
+    end if;
+end process register_proc;
 	-----------------------------------------------------					   
 				  
 end thunderbird_fsm_arch;

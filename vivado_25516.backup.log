@@ -1,0 +1,269 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Mon Mar 16 13:32:09 2026
+# Process ID         : 25516
+# Current directory  : C:/USAFA/Spring 2026/ECE281/ece281-lab3
+# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent8924 C:\USAFA\Spring 2026\ECE281\ece281-lab3\thunderbird.xpr
+# Log file           : C:/USAFA/Spring 2026/ECE281/ece281-lab3/vivado.log
+# Journal file       : C:/USAFA/Spring 2026/ECE281/ece281-lab3\vivado.jou
+# Running On         : C28-2TK41600RQ
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 22631
+# Processor Detail   : AMD Ryzen 7 PRO 7840U w/ Radeon 780M Graphics  
+# CPU Frequency      : 3294 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 29827 MB
+# Swap memory        : 4563 MB
+# Total Virtual      : 34390 MB
+# Available Virtual  : 17472 MB
+#-----------------------------------------------------------
+start_gui
+open_project {C:/USAFA/Spring 2026/ECE281/ece281-lab3/thunderbird.xpr}
+WARNING: [filemgmt 56-3] Board Part Repository Path: Could not find the directory 'C:/USAFA/Spring 2026/AppData/Roaming/Xilinx/Vivado/2024.2/xhub/board_store/xilinx_board_store'.
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/USAFA/Spring 2026/ECE281/ece281-lab3/thunderbird.gen/sources_1'.
+WARNING: [filemgmt 56-3] IPUserFilesDir: Could not find the directory 'C:/USAFA/Spring 2026/ECE281/ece281-lab3/thunderbird.ip_user_files'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2024.2/data/ip'.
+open_project: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 1099.211 ; gain = 40.848
+update_compile_order -fileset sources_1
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\USAFA\Spring 2026\ECE281\ece281-lab3\src\thunderbird_fsm.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\USAFA\Spring 2026\ECE281\ece281-lab3\src\thunderbird_fsm_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\USAFA\Spring 2026\ECE281\ece281-lab3\src\thunderbird_fsm_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\USAFA\Spring 2026\ECE281\ece281-lab3\src\thunderbird_fsm_tb.vhd:]
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'thunderbird_fsm_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-4705] 'export_ip_user_files' task aborted
+INFO: [Common 17-344] 'launch_simulation' was cancelled
+ERROR: [Common 17-180] Spawn failed: No error
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'thunderbird_fsm_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/USAFA/Spring 2026/ECE281/ece281-lab3/thunderbird.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'thunderbird_fsm_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/USAFA/Spring 2026/ECE281/ece281-lab3/thunderbird.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj thunderbird_fsm_tb_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/USAFA/Spring 2026/ECE281/ece281-lab3/src/thunderbird_fsm.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'thunderbird_fsm'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/USAFA/Spring 2026/ECE281/ece281-lab3/src/thunderbird_fsm_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'thunderbird_fsm_tb'
+INFO: [USF-XSim-69] 'compile' step finished in '6' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/USAFA/Spring 2026/ECE281/ece281-lab3/thunderbird.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot thunderbird_fsm_tb_behav xil_defaultlib.thunderbird_fsm_tb -log elaborate.log"
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot thunderbird_fsm_tb_behav xil_defaultlib.thunderbird_fsm_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture thunderbird_fsm_arch of entity xil_defaultlib.thunderbird_fsm [thunderbird_fsm_default]
+Compiling architecture test_bench of entity xil_defaultlib.thunderbird_fsm_tb
+Built simulation snapshot thunderbird_fsm_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '9' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/USAFA/Spring 2026/ECE281/ece281-lab3/thunderbird.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "thunderbird_fsm_tb_behav -key {Behavioral:sim_1:Functional:thunderbird_fsm_tb} -tclbatch {thunderbird_fsm_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source thunderbird_fsm_tb.tcl
+Failure: lights should be off on reset
+Time: 10 ns  Iteration: 0  Process: /thunderbird_fsm_tb/sim_proc  File: C:/USAFA/Spring 2026/ECE281/ece281-lab3/src/thunderbird_fsm_tb.vhd
+$finish called at time : 10 ns : File "C:/USAFA/Spring 2026/ECE281/ece281-lab3/src/thunderbird_fsm_tb.vhd" Line 109
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'thunderbird_fsm_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\USAFA\Spring 2026\ECE281\ece281-lab3\src\thunderbird_fsm.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\USAFA\Spring 2026\ECE281\ece281-lab3\src\thunderbird_fsm_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\USAFA\Spring 2026\ECE281\ece281-lab3\src\thunderbird_fsm_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\USAFA\Spring 2026\ECE281\ece281-lab3\src\thunderbird_fsm_tb.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'thunderbird_fsm_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/USAFA/Spring 2026/ECE281/ece281-lab3/thunderbird.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'thunderbird_fsm_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/USAFA/Spring 2026/ECE281/ece281-lab3/thunderbird.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj thunderbird_fsm_tb_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/USAFA/Spring 2026/ECE281/ece281-lab3/src/thunderbird_fsm.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'thunderbird_fsm'
+INFO: [USF-XSim-69] 'compile' step finished in '5' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/USAFA/Spring 2026/ECE281/ece281-lab3/thunderbird.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot thunderbird_fsm_tb_behav xil_defaultlib.thunderbird_fsm_tb -log elaborate.log"
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot thunderbird_fsm_tb_behav xil_defaultlib.thunderbird_fsm_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture thunderbird_fsm_arch of entity xil_defaultlib.thunderbird_fsm [thunderbird_fsm_default]
+Compiling architecture test_bench of entity xil_defaultlib.thunderbird_fsm_tb
+Built simulation snapshot thunderbird_fsm_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '8' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/USAFA/Spring 2026/ECE281/ece281-lab3/thunderbird.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "thunderbird_fsm_tb_behav -key {Behavioral:sim_1:Functional:thunderbird_fsm_tb} -tclbatch {thunderbird_fsm_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source thunderbird_fsm_tb.tcl
+Failure: L3 should be on
+Time: 50 ns  Iteration: 0  Process: /thunderbird_fsm_tb/sim_proc  File: C:/USAFA/Spring 2026/ECE281/ece281-lab3/src/thunderbird_fsm_tb.vhd
+$finish called at time : 50 ns : File "C:/USAFA/Spring 2026/ECE281/ece281-lab3/src/thunderbird_fsm_tb.vhd" Line 125
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'thunderbird_fsm_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\USAFA\Spring 2026\ECE281\ece281-lab3\src\thunderbird_fsm.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\USAFA\Spring 2026\ECE281\ece281-lab3\src\thunderbird_fsm_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\USAFA\Spring 2026\ECE281\ece281-lab3\src\thunderbird_fsm_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\USAFA\Spring 2026\ECE281\ece281-lab3\src\thunderbird_fsm_tb.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'thunderbird_fsm_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/USAFA/Spring 2026/ECE281/ece281-lab3/thunderbird.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'thunderbird_fsm_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/USAFA/Spring 2026/ECE281/ece281-lab3/thunderbird.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj thunderbird_fsm_tb_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/USAFA/Spring 2026/ECE281/ece281-lab3/src/thunderbird_fsm.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'thunderbird_fsm'
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/USAFA/Spring 2026/ECE281/ece281-lab3/thunderbird.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot thunderbird_fsm_tb_behav xil_defaultlib.thunderbird_fsm_tb -log elaborate.log"
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot thunderbird_fsm_tb_behav xil_defaultlib.thunderbird_fsm_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture thunderbird_fsm_arch of entity xil_defaultlib.thunderbird_fsm [thunderbird_fsm_default]
+Compiling architecture test_bench of entity xil_defaultlib.thunderbird_fsm_tb
+Built simulation snapshot thunderbird_fsm_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/USAFA/Spring 2026/ECE281/ece281-lab3/thunderbird.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "thunderbird_fsm_tb_behav -key {Behavioral:sim_1:Functional:thunderbird_fsm_tb} -tclbatch {thunderbird_fsm_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source thunderbird_fsm_tb.tcl
+Failure: L3 should be on
+Time: 50 ns  Iteration: 0  Process: /thunderbird_fsm_tb/sim_proc  File: C:/USAFA/Spring 2026/ECE281/ece281-lab3/src/thunderbird_fsm_tb.vhd
+$finish called at time : 50 ns : File "C:/USAFA/Spring 2026/ECE281/ece281-lab3/src/thunderbird_fsm_tb.vhd" Line 125
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'thunderbird_fsm_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+close_sim
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\USAFA\Spring 2026\ECE281\ece281-lab3\src\thunderbird_fsm.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\USAFA\Spring 2026\ECE281\ece281-lab3\src\thunderbird_fsm_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\USAFA\Spring 2026\ECE281\ece281-lab3\src\thunderbird_fsm_tb.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\USAFA\Spring 2026\ECE281\ece281-lab3\src\thunderbird_fsm_tb.vhd:]
+INFO: [Simtcl 6-16] Simulation closed
+ERROR: [Common 17-180] Spawn failed: No error
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'thunderbird_fsm_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/USAFA/Spring 2026/ECE281/ece281-lab3/thunderbird.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'thunderbird_fsm_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/USAFA/Spring 2026/ECE281/ece281-lab3/thunderbird.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj thunderbird_fsm_tb_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/USAFA/Spring 2026/ECE281/ece281-lab3/src/thunderbird_fsm.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'thunderbird_fsm'
+INFO: [USF-XSim-69] 'compile' step finished in '5' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/USAFA/Spring 2026/ECE281/ece281-lab3/thunderbird.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot thunderbird_fsm_tb_behav xil_defaultlib.thunderbird_fsm_tb -log elaborate.log"
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot thunderbird_fsm_tb_behav xil_defaultlib.thunderbird_fsm_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture thunderbird_fsm_arch of entity xil_defaultlib.thunderbird_fsm [thunderbird_fsm_default]
+Compiling architecture test_bench of entity xil_defaultlib.thunderbird_fsm_tb
+Built simulation snapshot thunderbird_fsm_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '8' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/USAFA/Spring 2026/ECE281/ece281-lab3/thunderbird.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "thunderbird_fsm_tb_behav -key {Behavioral:sim_1:Functional:thunderbird_fsm_tb} -tclbatch {thunderbird_fsm_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source thunderbird_fsm_tb.tcl
+Failure: lights should be off on reset
+Time: 10 ns  Iteration: 0  Process: /thunderbird_fsm_tb/sim_proc  File: C:/USAFA/Spring 2026/ECE281/ece281-lab3/src/thunderbird_fsm_tb.vhd
+$finish called at time : 10 ns : File "C:/USAFA/Spring 2026/ECE281/ece281-lab3/src/thunderbird_fsm_tb.vhd" Line 109
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'thunderbird_fsm_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Mar 16 15:02:45 2026...

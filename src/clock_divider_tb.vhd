@@ -70,7 +70,7 @@ architecture test_bench of clock_divider_tb is
 	signal reset, slow_clk	: std_logic	:= '0';
 	
 	-- Set clk divide amount here
-	constant k_clock_divs	: natural	:= 10;
+	constant k_clock_divs	: natural	:= 12500000;
 	
 begin
 	-- PORT MAPS ----------------------------------------

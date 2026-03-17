@@ -1,0 +1,4 @@
+Running: xsim.dir/thunderbird_fsm_tb_behav/xsimk.exe -simmode gui -wdb thunderbird_fsm_tb_behav.wdb -simrunnum 0 -socket 54909
+Design successfully loaded
+Design Loading Memory Usage: 27332 KB (Peak: 27332 KB)
+Design Loading CPU Usage: 906 ms

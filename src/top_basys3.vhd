@@ -86,15 +86,52 @@ end top_basys3;
 architecture top_basys3_arch of top_basys3 is 
   
 	-- declare components
-
+	component thunderbird_fsm is 
+	  port (
+        i_clk, i_reset  : in    std_logic;
+        i_left, i_right : in    std_logic;
+        o_lights_L      : out   std_logic_vector(2 downto 0);
+        o_lights_R      : out   std_logic_vector(2 downto 0)
+    );
+	end component thunderbird_fsm;
+    
+    component clock_divider is
+        generic ( constant k_DIV : natural := 2	); -- How many clk cycles until slow clock toggles
+                                                   -- Effectively, you divide the clk double this 
+                                                   -- number (e.g., k_DIV := 2 --> clock divider of 4)
+        port ( 	i_clk    : in std_logic;
+                i_reset  : in std_logic;		   -- asynchronous
+                o_clk    : out std_logic		   -- divided (slow) clock
+        );
+    end component clock_divider;
+  
+signal w_clk_slow  : std_logic;
+signal w_lights_L  : std_logic_vector(2 downto 0);
+signal w_lights_R  : std_logic_vector(2 downto 0);  
   
 begin
 	-- PORT MAPS ----------------------------------------
-
-	
+    
+    thunderbird_inst : thunderbird_fsm port map (
+        i_clk    => w_clk_slow,
+        i_reset  => btnR,        
+        i_left   => sw(15),
+        i_right  => sw(0),
+        o_lights_L => w_lights_L,
+        o_lights_R => w_lights_R
+    );
+    
+    uut_inst : clock_divider
+    generic map (k_DIV => 12500000)
+    port map (
+        i_clk   => clk,
+        i_reset => btnL,      -- clock reset
+        o_clk   => w_clk_slow
+    );
 	
 	-- CONCURRENT STATEMENTS ----------------------------
-	
+	led(15 downto 13) <= w_lights_L;  
+    led(2 downto 0)   <= w_lights_R;  
 	-- ground unused LEDs
 	-- leave unused switches UNCONNECTED
 	
